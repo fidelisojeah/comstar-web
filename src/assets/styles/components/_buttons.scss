@@ -1,0 +1,141 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #000;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  background-color: #fff;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
+  &.button-shadow {
+    -webkit-animation: pulses 3s infinite;
+    animation: pulses 3s infinite;
+    position: relative;
+  }
+  &.-bordered {
+    border: 2px solid #000;
+    padding: 10px 20px;
+    background-color: transparent;
+  }
+  &.-arrowed {
+    .button--inner {
+      &:before {
+        content: '\f061';
+      }
+    }
+  }
+  &.-large {
+    .button--inner {
+      &:before {
+        margin-right: -8px;
+      }
+    }
+  }
+  &.-large {
+    font-size: 17px;
+    padding: 16px 30px;
+    &.-bordered {
+      padding: 14px 28px;
+    }
+  }
+  &.-medium {
+    font-size: 17px;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &.-wide {
+    display: block;
+    width: 100%;
+  }
+  &.-form_size {
+    padding: 5px 10px;
+  }
+  &.-form_size2 {
+    padding: 8px 22px;
+    span {
+      line-height: 2;
+    }
+  }
+  &.-menu_size {
+    padding: 12px 18px;
+    &.-bordered {
+      padding: 10px 18px;
+    }
+  }
+  &.-primary {
+    background-color: theme-color("secondary");
+    color: #ffffff;
+    &:hover {
+      opacity: 0.8;
+    }
+    &.-bordered {
+      background-color: transparent;
+      color: theme-color("secondary");
+      border-color: theme-color("secondary");
+      ;
+    }
+  }
+  &.-secondary {
+    background-color: theme-color("primary");
+    color: #ffffff;
+    &:hover {
+      opacity: 0.8;
+    }
+    &.-bordered {
+      background-color: transparent;
+      color: theme-color("primary");
+      border-color: theme-color("primary");
+      ;
+    }
+  }
+  @media only screen and (max-width: map-get($grid-breakpoints, md)) {
+    white-space: normal;
+    font-size: 13px;
+    padding: 12px 16px;
+    .button--inner {
+      padding: 0;
+      margin: 0;
+    }
+    &.-bordered {
+      padding: 10px 12px;
+    }
+    &.-with_arrow {
+      &:hover i {
+        display: none;
+      }
+    }
+    &.-large {
+      font-size: 15px;
+      padding: 14px 24px;
+    }
+  }
+}
+
+@keyframes pulses {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
