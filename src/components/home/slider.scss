@@ -1,0 +1,28 @@
+.home-slider {
+  height: 490px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  background-color: #111111;
+}
+
+.sun {
+  width: 15vw;
+  height: 15vw;
+  background: #ff0;
+  box-shadow: 0 0 50px #ff0, 0 0 75px #ff0;
+  background: radial-gradient(ellipse at center, #f90 0%, #fc0 60%, #ff0 100%);
+  border-radius: 100%;
+  position: absolute;
+  bottom: -2vw;
+  right: 78vw;
+  transform-origin: -28vw 7vw;
+}
+
+.svg-background {
+  position: absolute;
+}
+
+.background-architecture {
+  bottom: 0;
+}

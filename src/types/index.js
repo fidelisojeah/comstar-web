@@ -1,0 +1,3 @@
+export const LOAD_HOME_PAGE_SUCCESS = 'homepage/LOAD_HOME_PAGE_SUCCESS';
+export const LOAD_HOME_PAGE_FAILURE = 'homepage/LOAD_HOME_PAGE_FAILURE';
+export const LOAD_HOME_PAGE_REQUEST = 'homepage/LOAD_HOME_PAGE_REQUEST';

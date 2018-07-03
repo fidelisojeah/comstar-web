@@ -1,0 +1,191 @@
+.footer {
+  background-size: contain;
+  position: relative;
+  background-image: url("../images/world_map.svg");
+  &>div {
+    position: relative;
+    z-index: 2;
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    background-color: rgba($inlet-background, 0.8);
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  @media only screen and (max-width: map-get($grid-breakpoints, lg)) {
+    background-size: contain;
+  }
+}
+
+.footer--bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($inlet-background, 0.9);
+  top: 0;
+  left: 0;
+}
+
+.footer--inner {
+  position: relative;
+  z-index: 1;
+}
+
+.footer_copyrights {
+  margin: 60px 0 0;
+  @media only screen and (max-width: map-get($grid-breakpoints, sm)) {
+    margin: 20px 0 0;
+    text-align: center;
+  }
+}
+
+.footer_copyrights--logo img {
+  width: 150px;
+}
+
+.footer_copyrights--container {
+  border-top: 1px solid rgba($grey, 0.1);
+  padding: 25px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footer_copyrights--item_copyrights {
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  opacity: 0.6;
+  text-align: right;
+  padding: 7px 0 0 0;
+  margin: 0;
+  @media only screen and (max-width: map-get($grid-breakpoints, sm)) {
+    text-align: center;
+    margin: 10px 0 0;
+    padding: 0;
+  }
+}
+
+.footer_main {
+  position: relative;
+  padding: 51px 0 0;
+  .footer_main--column_title {
+    color: #fff;
+    font-size: 17px;
+    line-height: 29px;
+    font-weight: 700;
+    display: block;
+    @media only screen and (max-width: map-get($grid-breakpoints, sm)) {
+      text-align: center;
+    }
+  }
+  [class*="col-"]:nth-child(1),
+  [class*="col-"]:nth-child(2) {
+    .footer_main--column {
+      @media only screen and (max-width: map-get($grid-breakpoints, sm)) {
+        margin: 50px 0 0;
+      }
+    }
+  }
+  .clearfix {
+    @include clearfix();
+  }
+}
+
+@media (max-width: 1190px) {
+  .footer_main--column {
+    margin: 50px 0 0;
+  }
+  .footer_main [class*="col-"]:nth-child(1) .footer_main--column,
+  .footer_main [class*="col-"]:nth-child(2) .footer_main--column {
+    margin: 0;
+  }
+}
+
+.footer_navigation {
+  padding: 6px 15px 0 0;
+}
+
+.footer_navigation--item {
+  display: block;
+  position: relative;
+  padding: 12px 25px 12px 0;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+    width: 300px;
+    margin: 0 auto;
+    .footer_navigation--item_wrap {
+      margin: 0;
+    }
+    .footer_navigation--item_nav {
+      padding: 0;
+    }
+  }
+}
+
+.footer_navigation--link {
+  color: #fff;
+  font-size: 15px;
+  line-height: 22px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer_contact_info {
+  padding: 5px 0 0;
+  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.footer_contact_info--item {
+  padding: 10px 0;
+  position: relative;
+  color: #fff;
+  font-size: 15px;
+  line-height: 25px;
+  i {
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: 12px;
+  }
+  span {
+    display: inline-block;
+    vertical-align: text-top;
+    padding: 0 0 0 28px;
+  }
+}
+
+.footer_about {
+  position: relative;
+  padding: 17px 25px 0 0;
+  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.footer_about--text {
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
+  padding: 0 0 16px;
+  &:last-child {
+    padding: 0;
+  }
+}
+
+.footer_blog {
+  position: relative;
+  padding: 7px 15px 0 0;
+  @media (max-width: 1190px) {
+      padding: 0 0 50px;
+  }
+}
