@@ -1,25 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './slider.css';
 
-import Background from './Background';
-import Architecture from './Architecture';
+import Background from './backgrounds/Background';
+import Architecture from './backgrounds/Architecture';
 
-import NonMovedClouds from './NonMovedClouds';
-import Clouds from './Clouds';
+import Clouds from './backgrounds/Clouds';
 
 import Birds from './elements/Birds';
 import Bird from './elements/Bird';
 
-function Slider(props) {
+function Slider() {
   return (
-    <section className="home-slider">
+    <Fragment>
+
       <Background
         width="100%" height="100%"
         className="background-animation clearfix svg-background"
-      />
-      <NonMovedClouds
-        width="100%" height="100%"
-        className="clouds svg-background"
       />
       <div className="sun clearfix" />
       <Birds />
@@ -36,7 +32,7 @@ function Slider(props) {
       <Bird
         birdNumber="three"
       />
-    </section>
+    </Fragment>
   );
 }
 export default Slider;

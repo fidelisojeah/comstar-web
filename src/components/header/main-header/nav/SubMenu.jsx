@@ -9,13 +9,18 @@ function SubMenu(props) {
         props.menuLinks.map(link => (
           <li
             key={link.id}
-            className="menu-item"
+            className={`menu-item ${link.subMenu && 'menu-item-has-children'}`}
           >
             <NavLink
               to={`/${link.link}`}
             >
               {link.name}
             </NavLink>
+            {link.subMenu &&
+              <SubMenu
+                menuLinks={link.subMenu}
+              />
+            }
           </li>
         ))}
     </ul>

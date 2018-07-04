@@ -50,15 +50,33 @@ export const initialData = {
       "link": "about",
       "name": "About Us",
       "subMenu": [
+
         {
           "id": 0,
-          "link": "about/management",
-          "name": "Management Team"
+          "link": "about/business",
+          "name": "Who we are"
         },
         {
           "id": 1,
           "link": "about/board-of-directors",
-          "name": "Board of Directors"
+          "name": "What we do"
+        },
+        {
+          "id": 2,
+          "link": "about/people",
+          "name": "Our People",
+          "subMenu": [
+            {
+              "id": 0,
+              "link": "about/people/management",
+              "name": "Management Team"
+            },
+            {
+              "id": 1,
+              "link": "about/people/board-of-directors",
+              "name": "Board of Directors"
+            }
+          ]
         }
       ]
     },
