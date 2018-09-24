@@ -28,6 +28,13 @@
       margin: 0 0 35px;
     }
   }
+  &--container {
+    .services {
+      &:first-child {
+        margin-top: -30px;
+      }
+    }
+  }
   .pagination {
     margin-bottom: -102px;
   }
@@ -188,15 +195,52 @@
   .clearfix {
     @include clearfix();
   }
+  &--title {
+    color: white;
+    font-size: 60px;
+    text-transform: none;
+    text-align: center;
+    font-weight: 600;
+  }
+  &--text {
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 36px;
+    margin: 28px 0 0;
+  }
+  @media only screen and (max-width: map-get($grid-breakpoints, xl)) {
+    &--title {
+      font-size: 44px;
+    }
+    &--text {
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
   @media only screen and (max-width: map-get($grid-breakpoints, lg)) {
     background: linear-gradient(to bottom, #163C52 0%, #4F4F47 30%, #C5752D 60%, #B7490F 80%, #2F1107 100%);
     height: 400px;
     .background-animation {
       display: none;
     }
+    &--title {
+      font-size: 36px;
+    }
+    &--text {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
   @media only screen and (max-width: map-get($grid-breakpoints, md)) {
     height: 300px;
+    &--title {
+      font-size: 32px;
+    }
+    &--text {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 }
 
